@@ -2,6 +2,9 @@
   --color-background: #363636;
   --color-primary: #63C7A9;
   --color-box: #FFFFFF;
+  --color-text: #363636;
+  --color-text-in-primary: #FFFFFF;
+  --color-text-base: #F0F0F2;
 
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
@@ -15,4 +18,28 @@
 
 body {
   font-size: 1.6rem;
+  background-color: var(--color-background);
+}
+
+header {
+  background: var(--color-background);
+  width: 100%;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  color: var(--color-text-in-primary);
+  font-size: 2.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+header img {
+  transform: translateX(-28px);
 }
