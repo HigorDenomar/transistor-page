@@ -1,5 +1,10 @@
 import React from 'react';
-import './App.css';
+import {
+  FiChevronLeft as ArrowLeft,
+  FiChevronRight as ArrowRight,
+} from 'react-icons/fi';
+
+import Card from './components/Card';
 
 import swordImg from './assets/sword.png';
 import heroImg from './assets/hero.png';
@@ -7,7 +12,7 @@ import person01Img from './assets/person-01.png';
 import person02Img from './assets/person-02.png';
 import person03Img from './assets/person-03.png';
 
-import Card from './components/Card';
+import './App.css';
 
 function App() {
   return (
@@ -18,7 +23,7 @@ function App() {
       </header>
 
       <main>
-        <section id="section-01">
+        <section id="first-section">
           <div className="contain-hero">
             <h2>TRANSISTOR - RED THE SINGER</h2>
             <img src={heroImg} alt="Hero" />
@@ -26,8 +31,9 @@ function App() {
           </div>
         </section>
 
-        <section id="section-02">
+        <section id="section-cards">
           <div className="cards">
+            <ArrowLeft />
             <Card
               description="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."
               src={person01Img}
@@ -40,6 +46,7 @@ function App() {
               description='Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.'
               src={person03Img}
             />
+            <ArrowRight />
           </div>
         </section>
         
