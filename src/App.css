@@ -8,6 +8,7 @@
 
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -197,4 +198,29 @@ section#section-form form button {
   font-size: 1.8rem;
   color: var(--color-text-base);
   cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer #circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--color-box);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14.3rem;
+  cursor: pointer;
+}
+
+footer #circle svg {
+  font-size: 5rem;
+  color: var(--color-text);
 }

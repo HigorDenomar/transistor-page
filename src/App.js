@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {
   FiChevronLeft as ArrowLeft,
   FiChevronRight as ArrowRight,
+  FiChevronUp as ArrowUp,
+  FiChevronDown as ArrowDawn,
 } from 'react-icons/fi';
 
 import Card from './components/Card';
@@ -93,6 +95,14 @@ function App() {
             </div>
           </form>
         </section>
+
+        <footer>
+          <div id="circle" onClick={() => {
+            window.scrollTo(0, 0);
+          }}>
+            <ArrowUp />
+          </div>
+        </footer>
       </main>
     </div>
   );
