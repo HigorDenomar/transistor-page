@@ -68,6 +68,16 @@
   }
 
   .card {
-    min-width: 38.7rem;
+    /* min-width: 38.7rem; */
+  }
+}
+
+@media (max-width: 850px) {
+  .person-container .hidden img {
+    max-width: 30rem;
+  }
+
+  .card {
+    /* min-width: 10.7rem; */
   }
 }

@@ -161,7 +161,8 @@ section#first-section .contain-hero p {
   color: var(--color-text-base);
   font-size: 2rem;
   text-align: center;
-  width: 27.1rem;
+  width: 100%;
+  max-width: 27.1rem;
 }
 
 section#section-cards {
@@ -213,6 +214,7 @@ section#section-form {
   height: 74.2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 section#section-form form {
@@ -221,7 +223,7 @@ section#section-form form {
   width: 100%;
   max-width: 108.2rem;
   height: 83.2rem;
-  margin: -4rem 3rem;
+  margin: -4rem 4rem;
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -312,7 +314,7 @@ footer #circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 14.3rem;
+  margin-right: 10%;
   cursor: pointer;
 }
 
@@ -331,36 +333,35 @@ footer #circle svg {
 }
 
 
-
 @media (max-width: 1140px) {
-  :root {
-    font-size: 58%;
-  }
-}
-
-@media (max-width: 1024px) {
   :root {
     font-size: 50%;
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
   :root {
     font-size: 45%;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 880px) {
   :root {
     font-size: 40%;
   }
+}
+
+@media (max-width: 850px) {
+  :root {
+    font-size: 35%;
+  }
 
   section#section-cards {
-    padding: 0 10rem;
+    padding: 0 auto;
   }
 
   section#section-cards .cards {
-    grid-template-columns: repeat(auto-fit, minmax( 43rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax( 49rem, 1fr));
     grid-template-areas: none;
   }
   
@@ -378,6 +379,27 @@ footer #circle svg {
 
   section#section-cards > svg {
     display: none;
+  }
+}
+
+@media(max-width: 470px) {
+  section#first-section .contain-hero #feather01 {
+    max-width: 9rem;
+    left: 0;
+  }
+  
+  section#first-section .contain-hero #feather02 {
+    max-width: 7rem;
+  }
+  
+  section#first-section .contain-hero #feather03 {
+    max-width: 16rem;
+    right: 0;
+  }
+  
+  section#first-section .contain-hero #feather04 {
+    max-width: 10rem;
+    right: 0;
   }
 }
 
