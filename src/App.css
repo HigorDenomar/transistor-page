@@ -94,7 +94,7 @@ section#section-cards {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 12rem 0;
+  padding: 12rem 0 15rem 0;
 }
 
 section#section-cards .cards {
@@ -107,10 +107,94 @@ section#section-cards .cards {
 
 section#section-cards .cards svg {
   color: var(--color-text-base);
-  font-size: 30rem;
+  font-size: 15rem;
   cursor: pointer;
 }
 
 section#section-cards .cards svg:hover {
   opacity: 0.8;
+}
+
+section#section-form {
+  background: var(--color-primary);
+  width: 100%;
+  height: 74.2rem;
+  display: flex;
+}
+
+section#section-form form {
+  background: var(--color-box);
+  box-shadow: 0 0 0.6rem #0000004D;
+  width: 100%;
+  max-width: 108.2rem;
+  height: 83.2rem;
+  margin: -4rem auto;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  padding: 8.3rem 2.2rem;
+}
+
+section#section-form form h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  align-self: center;
+}
+
+section#section-form form p {
+  color: var(--color-text);
+  font-size: 2rem;
+  margin: 4.1rem auto 5.1rem auto;
+  width: 75rem;
+}
+
+section#section-form form #inputs {
+  width: 52.8rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 19.7rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.9rem;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "button button"
+  ;
+}
+
+form input:first-child {
+  grid-area: name;
+}
+
+form input:last-child {
+  grid-area: email;
+}
+
+#section-form form input {
+  height: 4.8rem;
+}
+
+#section-form form input,
+#section-form form textarea {
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 1.5rem;
+}
+
+section#section-form form textarea {
+  grid-area: message;
+  max-height: 22.7rem;
+  resize: vertical;
+}
+
+section#section-form form button {
+  grid-area: button;
+  width: 24.9rem;
+  height: 4.8rem;
+  background: var(--color-primary);
+  border: 0;
+  font-size: 1.8rem;
+  color: var(--color-text-base);
+  cursor: pointer;
 }

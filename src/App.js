@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FiChevronLeft as ArrowLeft,
   FiChevronRight as ArrowRight,
@@ -15,10 +15,18 @@ import person03Img from './assets/person-03.png';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(`Sua mensagem foi enviada com sucesso!\n\nNome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
+  }
   return (
     <div id="landing-page">
       <header>
-        <img src={swordImg} alt="Espada"/>
+        <img src={swordImg} alt="Espada" />
         <h1>SUPERGIANTGAMES</h1>
       </header>
 
@@ -50,6 +58,41 @@ function App() {
           </div>
         </section>
         
+        <section id="section-form">
+          <form onSubmit={handleSubmit}>
+            <h1>Formulário</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div id="inputs">
+              <input
+                type="text"
+                placeholder="Nome"
+                required
+                name="name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                name="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              
+              <textarea
+                name="message"
+                placeholder="Mensagem"
+                required
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+              />
+
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </section>
       </main>
     </div>
   );
