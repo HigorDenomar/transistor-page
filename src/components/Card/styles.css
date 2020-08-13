@@ -3,7 +3,7 @@
   max-width: 38.7rem;
   height: 61.3rem;
   padding: 0 2rem;
-  margin: 20rem 0.8rem 0.8rem 0.8rem;
+  margin: 20rem auto 0.8rem auto;
   border-radius: 2.7rem;
   background-color: var(--color-box);
   box-shadow: 0px 0.3rem 0.6rem #FFFFFF63;
@@ -22,35 +22,52 @@
 
 .card .person-container {
   background-color: var(--color-background);
-  border-radius: 10rem;
-  margin-top: -10rem;
+  border-radius: 28%;
+  margin-top: -30%;
   border: 0.4rem solid var(--color-box);
   display: flex;
+  width: 100%;
+  max-width: 39.8rem;
 }
 
 .person-container .hidden {
-  margin: -11.5rem auto 0 -2rem;
-  border-radius: 0 0 10rem 12.8rem;
+  margin: -32% 0 0 -2rem;
+  border-radius: 0 0 28% 34%;
   display: flex;
   overflow: hidden;
 }
 
 .person-container .hidden img {
   width: 100%;
-  max-width: 39.8rem;
+  max-width: 54.3rem;
   transform: translateY(1.2rem);
 }
 
-/* 
+
 @media (max-width: 1800px) {
   .person-container .hidden img {
-    height: 40rem;
+    width: 40rem;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1380px) {
   .person-container .hidden img {
-    height: 100%;
-    max-height: 35rem;
+    max-width: 35rem;
   }
-} */
+}
+
+@media (max-width: 1260px) {
+  .person-container .hidden img {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .person-container .hidden img {
+    max-width: 35rem;
+  }
+
+  .card {
+    min-width: 38.7rem;
+  }
+}

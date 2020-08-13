@@ -60,14 +60,17 @@ function App() {
           <ArrowLeft />
           <div className="cards">
             <Card
+              id="card01"
               description="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."
               src={person01Img}
             />
             <Card
+              id="card02"
               description="Red, uma jovem cantora, entrou em posse do Transistor. Sendo a poderosa espada falante. O grupo Possessores quer tanto ela quanto o Transistor e está perseguindo implacavelmente a sua procura."
               src={person02Img}
             />
             <Card
+              id="card03"
               description='Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.'
               src={person03Img}
             />

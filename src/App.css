@@ -169,24 +169,38 @@ section#section-cards {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 12rem 0 15rem 0;
+  justify-content: center;
+  padding: 12rem auto 15rem auto;
 }
 
 section#section-cards .cards {
-  display: flex;
+  display: grid;
   width: 100%;
-  max-width: 256rem;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 auto;
+  max-width: 180rem;
+  grid-template-areas:
+    "card1 card2 card3"
+  ;
+  grid-gap: 2rem;
+  margin: 12rem 0;
+}
+
+section#section-cards .cards #card01 {
+  grid-area: card1;
+}
+
+section#section-cards .cards #card02 {
+  grid-area: card2;
+}
+
+section#section-cards .cards #card03 {
+  grid-area: card3;
 }
 
 section#section-cards > svg {
   color: var(--color-text-base);
   font-size: 12rem;
   cursor: pointer;
+  width: 12rem;
 }
 
 section#section-cards > svg:hover {
@@ -336,8 +350,45 @@ footer #circle svg {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 850px) {
   :root {
     font-size: 40%;
+  }
+
+  section#section-cards {
+    padding: 0 10rem;
+  }
+
+  section#section-cards .cards {
+    grid-template-columns: repeat(auto-fit, minmax( 43rem, 1fr));
+    grid-template-areas: none;
+  }
+  
+  section#section-cards .cards #card01 {
+    grid-area: auto;
+  }
+  
+  section#section-cards .cards #card02 {
+    grid-area: auto;
+  }
+  
+  section#section-cards .cards #card03 {
+    grid-area: auto;
+  }
+
+  section#section-cards > svg {
+    display: none;
+  }
+}
+
+@media(max-width: 420px) {
+  section#section-cards {
+    padding: 0 4rem;
+  }
+}
+
+@media(max-width: 320px) {
+  section#section-cards {
+    padding: 0 2rem;
   }
 }
