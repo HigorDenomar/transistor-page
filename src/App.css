@@ -55,6 +55,7 @@ section#first-section {
   padding-top: 8rem;
   display: flex;
   position: relative;
+  justify-content: center;
 }
 
 section#first-section #scroll_to {
@@ -101,7 +102,6 @@ section#first-section .contain-hero {
   max-width: 58.6rem;
   height: 100%;
   padding: 1.5rem 3rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,7 +117,8 @@ section#first-section .contain-hero h2 {
 
 section#first-section .contain-hero img {
   margin: 2rem 0;
-  width: 54.5rem;
+  width: 100%;
+  max-width: 54.5rem;
   object-fit: contain;
   object-position: center;
 }
@@ -131,28 +132,30 @@ section#first-section .contain-hero p {
 
 section#section-cards {
   width: 100%;
-  min-height: 10rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   padding: 12rem 0 15rem 0;
 }
 
 section#section-cards .cards {
   display: flex;
   width: 100%;
+  max-width: 256rem;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0 auto;
 }
 
-section#section-cards .cards svg {
+section#section-cards > svg {
   color: var(--color-text-base);
-  font-size: 15rem;
+  font-size: 12rem;
   cursor: pointer;
 }
 
-section#section-cards .cards svg:hover {
+section#section-cards > svg:hover {
   opacity: 0.8;
 }
 
@@ -161,6 +164,7 @@ section#section-form {
   width: 100%;
   height: 74.2rem;
   display: flex;
+  justify-content: center;
 }
 
 section#section-form form {
@@ -169,7 +173,7 @@ section#section-form form {
   width: 100%;
   max-width: 108.2rem;
   height: 83.2rem;
-  margin: -4rem auto;
+  margin: -4rem 3rem;
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -187,11 +191,13 @@ section#section-form form p {
   color: var(--color-text);
   font-size: 2rem;
   margin: 4.1rem auto 5.1rem auto;
-  width: 75rem;
+  width: 100%;
+  max-width: 75rem;
 }
 
 section#section-form form #inputs {
-  width: 52.8rem;
+  width: 100%;
+  max-width: 52.8rem;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 1fr 19.7rem 1fr;
@@ -218,6 +224,7 @@ form input:last-child {
 
 #section-form form input,
 #section-form form textarea {
+  width: 100%;
   font-size: 1.8rem;
   font-family: 'Open Sans', sans-serif;
   padding: 1.5rem;
@@ -231,7 +238,8 @@ section#section-form form textarea {
 
 section#section-form form button {
   grid-area: button;
-  width: 24.9rem;
+  width: 100%;
+  max-width: 24.9rem;
   height: 4.8rem;
   background: var(--color-primary);
   border: 0;
@@ -271,5 +279,31 @@ footer #circle svg {
     transform: translateY(0.4rem);
   } 100% {
     transform: translateY(-0.6rem);
+  }
+}
+
+
+
+@media (max-width: 1140px) {
+  :root {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 880px) {
+  :root {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 40%;
   }
 }

@@ -1,11 +1,17 @@
 .card {
-  width: 38.7rem;
+  width: 100%;
+  max-width: 38.7rem;
   height: 61.3rem;
   padding: 0 2rem;
   margin: 20rem 0.8rem 0.8rem 0.8rem;
   border-radius: 2.7rem;
   background-color: var(--color-box);
   box-shadow: 0px 0.3rem 0.6rem #FFFFFF63;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4rem);
 }
 
 .card p {
@@ -30,6 +36,21 @@
 }
 
 .person-container .hidden img {
-  height: 55rem;
+  width: 100%;
+  max-width: 39.8rem;
   transform: translateY(1.2rem);
 }
+
+/* 
+@media (max-width: 1800px) {
+  .person-container .hidden img {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .person-container .hidden img {
+    height: 100%;
+    max-height: 35rem;
+  }
+} */

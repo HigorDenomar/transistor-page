@@ -21,7 +21,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const cardsRef = useRef(null)
+  const cardsRef = useRef(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -51,8 +51,8 @@ function App() {
         </section>
 
         <section ref={cardsRef} id="section-cards">
+          <ArrowLeft />
           <div className="cards">
-            <ArrowLeft />
             <Card
               description="A Camerata foi apenas os dois no início, e suas fileiras nunca foram destinadas a exceder um número a ser contado em uma mão."
               src={person01Img}
@@ -65,8 +65,8 @@ function App() {
               description='Sybil é descrita pelo Transistor como sendo os "olhos e ouvidos" da Camerata.'
               src={person03Img}
             />
-            <ArrowRight />
           </div>
+          <ArrowRight />
         </section>
         
         <section id="section-form">
