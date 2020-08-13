@@ -120,26 +120,31 @@ section#first-section .contain-hero .feather {
   position: absolute;
   width: 100%;
   max-width: 12rem;
+  opacity: 0;
 }
 
 section#first-section .contain-hero #feather01 {
   max-width: 12rem;
   top: 40rem;
-  transform: rotateY(180deg) rotateZ(-15deg);
   left: -3rem;
+  animation: falling-left01 4s infinite linear;
+  animation-delay: 0.5s;
 }
 
 section#first-section .contain-hero #feather02 {
   max-width: 8.5rem;
   top: 52rem;
-  transform: rotateY(180deg) rotateZ(60deg);
   left: 3rem;
+  animation: falling-left02 4s infinite linear;
+  animation-delay: 2s;
 }
 
 section#first-section .contain-hero #feather03 {
   max-width: 20rem;
   top: 31rem;
   right: -3rem;
+  animation: falling-right01 7.5s infinite linear;
+  animation-delay: 2s;
 }
 
 section#first-section .contain-hero #feather04 {
@@ -147,6 +152,8 @@ section#first-section .contain-hero #feather04 {
   top: 52rem;
   transform: rotateZ(40deg);
   right: -5rem;
+  animation: falling-right02 8.5s infinite linear;
+  animation-delay: 0.6s;
 }
 
 section#first-section .contain-hero img {
@@ -155,6 +162,8 @@ section#first-section .contain-hero img {
   max-width: 54.5rem;
   object-fit: contain;
   object-position: center;
+  animation: fade 1s backwards;
+  animation-delay: 0.5s;
 }
 
 section#first-section .contain-hero p {
@@ -316,18 +325,98 @@ footer #circle {
   justify-content: center;
   margin-right: 10%;
   cursor: pointer;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+footer #circle:hover {
+  transform: translateY(-1rem);
 }
 
 footer #circle svg {
   font-size: 5rem;
   color: var(--color-text);
+  transition: 0.2s;
+}
+
+footer #circle:hover svg {
+  animation: up 0.6s;
 }
 
 
-@keyframes move {
+@keyframes fade {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes falling-left01 {
   0% {
-    transform: translateY(0.4rem);
+    opacity: 0;
+    transform: translateY(-20rem) rotateY(180deg) rotateZ(-50deg);
+  } 50% {
+    opacity: 1;
   } 100% {
+    transform: translateY(20rem) rotateY(180deg) rotateZ(60deg);
+    opacity: 0;
+  }
+}
+
+@keyframes falling-left02 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20rem) rotateY(180deg) rotateZ(-50deg);
+  } 50% {
+    opacity: 1;
+  } 100% {
+    transform: translateY(20rem) rotateY(180deg) rotateZ(20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes falling-right01 {
+  0% {
+    opacity: 0;
+    transform: translateY(-40rem) rotateZ(-50deg);
+  } 50% {
+    opacity: 1;
+  } 100% {
+    transform: translateY(45rem) rotateZ(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes falling-right02 {
+  0% {
+    opacity: 0;
+    transform: translateY(-30rem) rotateZ(-50deg);
+  } 50% {
+    opacity: 1;
+  } 100% {
+    transform: translateY(20rem) rotateZ(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0.0);
+  } 10% {
+    transform: translateY(0.4rem);
+  } 50% {
+    opacity: 0.8;
+    transform: translateY(-6rem);
+  } 50.9% {
+    transform: translateY(6rem);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0.4rem);
+  } to {
     transform: translateY(-0.6rem);
   }
 }
