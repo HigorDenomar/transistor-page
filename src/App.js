@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   FiChevronLeft as ArrowLeft,
   FiChevronRight as ArrowRight,
@@ -21,6 +21,8 @@ function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const cardsRef = useRef(null)
+
   function handleSubmit(event) {
     event.preventDefault();
     alert(`Sua mensagem foi enviada com sucesso!\n\nNome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
@@ -39,9 +41,16 @@ function App() {
             <img src={heroImg} alt="Hero" />
             <p>"Olha, o que quer que você esteja pensando, me faça um favor, não solte."</p>
           </div>
+          <div
+            id="scroll_to"
+            onClick={() => {
+              window.scrollTo(0, cardsRef.current.offsetTop);
+            }}
+          />
+          <ArrowDawn />
         </section>
 
-        <section id="section-cards">
+        <section ref={cardsRef} id="section-cards">
           <div className="cards">
             <ArrowLeft />
             <Card
