@@ -13,6 +13,7 @@ import heroImg from './assets/hero.png';
 import person01Img from './assets/person-01.png';
 import person02Img from './assets/person-02.png';
 import person03Img from './assets/person-03.png';
+import featherImg from './assets/feather.png';
 
 import './App.css';
 
@@ -40,6 +41,11 @@ function App() {
             <h2>TRANSISTOR - RED THE SINGER</h2>
             <img src={heroImg} alt="Hero" />
             <p>"Olha, o que quer que você esteja pensando, me faça um favor, não solte."</p>
+
+            <img src={featherImg} className="feather" id="feather01" alt=""/>
+            <img src={featherImg} className="feather" id="feather02" alt=""/>
+            <img src={featherImg} className="feather" id="feather03" alt=""/>
+            <img src={featherImg} className="feather" id="feather04" alt=""/>
           </div>
           <div
             id="scroll_to"

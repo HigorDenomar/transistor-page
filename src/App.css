@@ -106,6 +106,7 @@ section#first-section .contain-hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 section#first-section .contain-hero h2 {
@@ -113,6 +114,39 @@ section#first-section .contain-hero h2 {
   font-size: 1.5rem;
   font-weight: 700;
   align-self: flex-start;
+}
+
+section#first-section .contain-hero .feather {
+  position: absolute;
+  width: 100%;
+  max-width: 12rem;
+}
+
+section#first-section .contain-hero #feather01 {
+  max-width: 12rem;
+  top: 40rem;
+  transform: rotateY(180deg) rotateZ(-15deg);
+  left: -3rem;
+}
+
+section#first-section .contain-hero #feather02 {
+  max-width: 8.5rem;
+  top: 52rem;
+  transform: rotateY(180deg) rotateZ(60deg);
+  left: 3rem;
+}
+
+section#first-section .contain-hero #feather03 {
+  max-width: 20rem;
+  top: 31rem;
+  right: -3rem;
+}
+
+section#first-section .contain-hero #feather04 {
+  max-width: 12rem;
+  top: 52rem;
+  transform: rotateZ(40deg);
+  right: -5rem;
 }
 
 section#first-section .contain-hero img {
